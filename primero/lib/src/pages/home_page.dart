@@ -12,6 +12,7 @@ class HomePage extends StatelessWidget{
 
       appBar: AppBar(
         title: Text('Titulo'),
+        centerTitle: true,
       ),
       body: Center(
         child: Text('Hola mundo'),
