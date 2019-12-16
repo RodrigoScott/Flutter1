@@ -7,6 +7,8 @@ class HomePage extends StatelessWidget{
 
   final estiloTexto = new TextStyle(fontSize: 25) ;
 
+  final cont = 10;
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -21,7 +23,7 @@ class HomePage extends StatelessWidget{
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text('Número de clics', style: estiloTexto),
-            Text('0', style: estiloTexto),
+            Text('$cont', style: estiloTexto),
           ],
         ),
       ),
@@ -31,6 +33,7 @@ class HomePage extends StatelessWidget{
         onPressed: (){
 
           print('Hola mundo');
+          //cont=cont+1;
         },
 
       ),
