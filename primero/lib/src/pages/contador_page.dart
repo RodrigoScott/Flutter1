@@ -1,4 +1,8 @@
+import 'dart:ffi';
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 
 class ContadorPage extends StatefulWidget{
@@ -34,7 +38,7 @@ class _ContadorPageState extends State<ContadorPage> {
             ],
           ),
         ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.endTop,
+        //floatingActionButtonLocation: FloatingActionButtonLocation.endTop,
         floatingActionButton: _crearBoton(),
 
       );
@@ -45,28 +49,37 @@ class _ContadorPageState extends State<ContadorPage> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.end,
       children: <Widget>[
-        SizedBox(width: 30),
-        FloatingActionButton( child: Icon(Icons.loop ), onPressed: _reset ),
-        Expanded(child: SizedBox()),
-        FloatingActionButton( child: Icon(Icons.backspace ), onPressed: _sustraer ),
-        SizedBox( width: 5.0 ),
-        FloatingActionButton( child: Icon(Icons.add_circle_outline ), onPressed: _agregar ),
+        SizedBox(width: 40,),
+        FloatingActionButton(child: Icon(Icons.loop), onPressed: _cero),
+        Expanded(child: SizedBox(width: 5)),
+        FloatingActionButton(child: Icon(Icons.add_circle_outline), onPressed: _sumar),
+        SizedBox(width: 5,),
+        FloatingActionButton(child: Icon(Icons.backspace), onPressed: _restar),
+        SizedBox(width: 5,),
+
       ],
     );
 
   }
 
-  void _agregar() {
-    setState(() => _cont++ );
+  void _sumar(){
+    setState(() {
+      _cont++;
+    });
   }
 
-  void _sustraer() {
-    setState(() => _cont-- );
+  void _restar(){
+    setState(() {
+      _cont--;
+    });
   }
 
-  void _reset() {
-    setState(() => _cont = 0 );
+  void _cero(){
+    setState(() {
+      _cont=0;
+    });
   }
+
 
 }
 
