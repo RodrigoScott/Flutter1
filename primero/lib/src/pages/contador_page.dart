@@ -46,11 +46,11 @@ class _ContadorPageState extends State<ContadorPage> {
       mainAxisAlignment: MainAxisAlignment.end,
       children: <Widget>[
         SizedBox(width: 30),
-        FloatingActionButton( child: Icon(Icons.exposure_zero ), onPressed: _reset ),
+        FloatingActionButton( child: Icon(Icons.loop ), onPressed: _reset ),
         Expanded(child: SizedBox()),
-        FloatingActionButton( child: Icon(Icons.remove ), onPressed: _sustraer ),
+        FloatingActionButton( child: Icon(Icons.backspace ), onPressed: _sustraer ),
         SizedBox( width: 5.0 ),
-        FloatingActionButton( child: Icon(Icons.add ), onPressed: _agregar ),
+        FloatingActionButton( child: Icon(Icons.add_circle_outline ), onPressed: _agregar ),
       ],
     );
 

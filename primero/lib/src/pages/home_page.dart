@@ -32,7 +32,7 @@ class HomePage extends StatelessWidget{
         child: Icon(Icons.add_circle_outline),
         onPressed: (){
 
-          print('Hola mundo');
+          //print('Hola mundo');
           //cont=cont+1;
         },
 
