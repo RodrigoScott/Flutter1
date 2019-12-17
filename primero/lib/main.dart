@@ -1,17 +1,14 @@
 
-
 import 'package:flutter/material.dart';
+
+// Nosotros escribimos
+// import 'src/app.dart';
 import 'package:primero/src/app.dart';
 
-//nuestras importaciones
-//import 'src/app.dart';
+void main() {
 
-
-
-void main(){
-
-  runApp(MyApp());
-
+  runApp( MyApp() );
 
 }
+
 

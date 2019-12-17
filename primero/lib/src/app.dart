@@ -9,13 +9,17 @@ import 'package:primero/src/pages/contador_page.dart';
 class MyApp extends StatelessWidget {
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(context) {
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      //initialRoute: 'ContadorPage',
+      //routes: {
+        //'ContadorPage': (BuildContext Context) => ContadorPage()
+      //},
 
       home: Center(
-        //child: HomePage(),
+        // child: HomePage(),
         child: ContadorPage(),
       ),
     );

@@ -22,7 +22,7 @@ class _ContadorPageState extends State<ContadorPage> {
       return Scaffold(
 
         appBar: AppBar(
-          title: Text('Titulo'),
+          title: Text('Primera Aplicación'),
           centerTitle: true,
         ),
         body: Center(
@@ -35,24 +35,38 @@ class _ContadorPageState extends State<ContadorPage> {
           ),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.endTop,
-        floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.add_circle_outline),
-          onPressed: () {
-            //print('Hola mundo');
-
-            setState(() {
-              _cont++;
-
-            });
-          },
-
-        ),
+        floatingActionButton: _crearBoton(),
 
       );
     }
 
+  Widget _crearBoton() {
 
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: <Widget>[
+        SizedBox(width: 30),
+        FloatingActionButton( child: Icon(Icons.exposure_zero ), onPressed: _reset ),
+        Expanded(child: SizedBox()),
+        FloatingActionButton( child: Icon(Icons.remove ), onPressed: _sustraer ),
+        SizedBox( width: 5.0 ),
+        FloatingActionButton( child: Icon(Icons.add ), onPressed: _agregar ),
+      ],
+    );
 
+  }
+
+  void _agregar() {
+    setState(() => _cont++ );
+  }
+
+  void _sustraer() {
+    setState(() => _cont-- );
+  }
+
+  void _reset() {
+    setState(() => _cont = 0 );
+  }
 
 }
 
