@@ -13,11 +13,6 @@ class MyApp extends StatelessWidget {
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      //initialRoute: 'ContadorPage',
-      //routes: {
-        //'ContadorPage': (BuildContext Context) => ContadorPage()
-      //},
-
       home: Center(
         // child: HomePage(),
         child: ContadorPage(),
